@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hasta Tanıma Testi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fef8f5;
+      padding: 40px;
+      color: #333;
+    }
+    h1 {
+      color: #8A4F7D;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 10px;
+      background-color: #8A4F7D;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .answer {
+      margin-top: 10px;
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bizi Tanıyın - Mini Eğlenceli Test</h1>
+  <div class="question">
+    <p><strong>Soru 1:</strong> Stresli bir günün ardından sizi en çok ne rahatlatır?</p>
+    <button onclick="showAnswer('answer1')">Cevabı Göster</button>
+    <div id="answer1" class="answer" style="display:none;">
+      Nefes terapisi, bir fincan bitki çayı ya da doğada kısa bir yürüyüş olabilir. Peki ya senin cevabın?
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>Soru 2:</strong> Sabah ilk iş olarak ne yaparsınız?</p>
+    <button onclick="showAnswer('answer2')">Cevabı Göster</button>
+    <div id="answer2" class="answer" style="display:none;">
+      Güne zinde başlamak için güneş ışığını yüzüne al, derin bir nefes al ve şükret.
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>Soru 3:</strong> Bir sağlık kampında seni en çok ne heyecanlandırırdı?</p>
+    <button onclick="showAnswer('answer3')">Cevabı Göster</button>
+    <div id="answer3" class="answer" style="display:none;">
+      Yoga seansı mı, sağlıklı yemek atölyesi mi yoksa şifalı nefes buluşması mı? Belki hepsi!
+    </div>
+  </div>
+
+  <script>
+    function showAnswer(id) {
+      var x = document.getElementById(id);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
